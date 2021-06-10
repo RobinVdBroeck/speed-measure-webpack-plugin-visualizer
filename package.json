@@ -1,0 +1,26 @@
+{
+  "name": "speed-measure-webpack-plugin-visualizer",
+  "version": "0.1.0",
+  "description": "Visualizes the output of speed-measure-webpack-plugin",
+  "bin": {
+    "speed-measure-webpack-plugin-visualizer": "./smwpv.js",
+    "smwpv": "./smwpv.js"
+  },
+  "author": "Robin Van den Broeck <robin.broeck@gmail.com> (https://robinvdb.me)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobinVdBroeck/speed-measure-webpack-plugin-visualizer.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write ./smpwv.js ./readme.md"
+  },
+  "dependencies": {
+    "commander": "^7.2.0",
+    "handlebars": "^4.7.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "prettier": "2.3.1"
+  }
+}
