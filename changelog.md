@@ -1,3 +1,9 @@
+# 0.1.2
+
+## Fixed
+
+- Add banner to smwpv.js
+
 # 0.1.1
 
 ## Documentation
@@ -8,3 +14,4 @@
 ## Fixes
 
 - Link to correct javascript files in package.json
+
