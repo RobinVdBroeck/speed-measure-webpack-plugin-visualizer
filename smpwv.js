@@ -53,7 +53,7 @@ async function compileTemplate() {
 
 async function main() {
   program
-    .version("0.1.0")
+    .version("0.1.2")
     .requiredOption("--input <filename> ", "input file")
     .option("--output <filename>", "output file", "results.html")
     .parse(process.argv);
