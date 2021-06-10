@@ -1,3 +1,9 @@
+# 0.1.3
+
+## Fixed
+
+- Compile time correctly appears in output
+
 # 0.1.2
 
 ## Fixed
