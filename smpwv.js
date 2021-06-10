@@ -52,8 +52,11 @@ async function compileTemplate() {
 }
 
 async function main() {
+  const package = await fs.readFile(path.join(__dirname, "package.json"));
+  const { version } = JSON.parse(package);
+
   program
-    .version("0.1.2")
+    .version(version)
     .requiredOption("--input <filename> ", "input file")
     .option("--output <filename>", "output file", "results.html")
     .parse(process.argv);

@@ -1,5 +1,9 @@
 # 0.1.3
 
+## Features
+
+- Read version from package.json
+
 ## Fixed
 
 - Compile time correctly appears in output
@@ -20,4 +24,3 @@
 ## Fixes
 
 - Link to correct javascript files in package.json
-
