@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write ./smpwv.js ./readme.md"
+    "format": "prettier --write ./smpwv.js ./readme.md ./changelog.md"
   },
   "dependencies": {
     "commander": "^7.2.0",
