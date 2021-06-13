@@ -6,7 +6,18 @@ const program = require("commander");
 const handlebars = require("handlebars");
 const { v4: uuid } = require("uuid");
 
+let versionCache = undefined;
+async function getVersion() {
+  if (typeof versionCache === "undefined") {
+    const package = await fs.readFile(path.join(__dirname, "package.json"));
+    const { version } = JSON.parse(package);
+    versionCache = version;
+  }
+  return versionCache;
+}
+
 async function readAndParseInputFile(inputFile) {
+  const version = await getVersion();
   const content = await fs.readFile(inputFile);
   const {
     plugins,
@@ -42,6 +53,7 @@ async function readAndParseInputFile(inputFile) {
     totalCompileTime,
     plugins: sortedPlugins,
     loaders: loaderView,
+    version,
   };
 }
 
@@ -52,8 +64,7 @@ async function compileTemplate() {
 }
 
 async function main() {
-  const package = await fs.readFile(path.join(__dirname, "package.json"));
-  const { version } = JSON.parse(package);
+  const version = await getVersion();
 
   program
     .version(version)
@@ -67,7 +78,6 @@ async function main() {
     readAndParseInputFile(options.input),
     compileTemplate(),
   ]);
-
   const rendered = template(viewModel);
 
   await fs.writeFile(options.output, rendered);
