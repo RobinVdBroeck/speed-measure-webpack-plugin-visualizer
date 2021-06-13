@@ -13,9 +13,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write ./smpwv.js ./readme.md ./CHANGELOG.md",
-    "release": "standard-version",
-    "commit": "cz"
+    "prepare": "husky install",
+    "commit": "cz",
+    "release": "standard-version"
   },
   "dependencies": {
     "commander": "^7.2.0",
@@ -25,6 +25,8 @@
   "devDependencies": {
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "2.3.1",
     "standard-version": "^9.3.0"
   },
@@ -32,5 +34,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{md,js}": "prettier --write"
   }
 }
