@@ -44,6 +44,8 @@ async function readAndParseInputFile(inputFile) {
         .map((o) => ({
           name: o.name,
           time: o.end - o.start,
+          start: new Date(o.start).toISOString(),
+          end: new Date(o.end).toISOString(),
         }))
         .sort((a, b) => b.time - a.time),
     }))

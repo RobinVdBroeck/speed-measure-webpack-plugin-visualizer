@@ -56,7 +56,8 @@
                                 data-bs-toggle="collapse" data-bs-target="[data-collapse-id='{{this.id}}']">Show files</button>
                         <ul class="collapse" data-collapse-id="{{this.id}}">
                             {{#each this.files}}
-                                <li>{{this.name}} (Time: {{this.time}} ms)</li>
+                                <li>{{this.name}} (Time: {{this.time}} ms,
+                                    start: {{this.start}} end: {{this.end}})</li>
                             {{/each}}
                         </ul>
                     </td>
@@ -64,11 +65,11 @@
             {{/each}}
             </tbody>
         </table>
+
         <footer>
             <p>
                 Generated with <a href="https://www.npmjs.com/package/speed-measure-webpack-plugin-visualizer">
                 speed-measure-webpack-plugin-visualizer v{{version}}</a>
-
             </p>
         </footer>
     </body>
