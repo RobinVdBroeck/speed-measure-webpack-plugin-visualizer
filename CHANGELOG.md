@@ -1,4 +1,6 @@
-# Unreleased (2021-06-13)
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [0.1.3](https://github.com/RobinVdBroeck/speed-measure-webpack-plugin-visualizer/compare/v0.1.2...v0.1.3) (2021-06-10)
 

@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write ./smpwv.js ./readme.md ./CHANGELOG.md",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "release": "standard-version",
     "commit": "cz"
   },
   "dependencies": {
@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
-    "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
-    "prettier": "2.3.1"
+    "prettier": "2.3.1",
+    "standard-version": "^9.3.0"
   },
   "config": {
     "commitizen": {
