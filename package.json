@@ -1,6 +1,6 @@
 {
   "name": "speed-measure-webpack-plugin-visualizer",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Visualizes the output of speed-measure-webpack-plugin",
   "bin": {
     "speed-measure-webpack-plugin-visualizer": "./smpwv.js",
