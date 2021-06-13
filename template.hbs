@@ -50,8 +50,8 @@
                     <td>{{this.time}}</td>
                     <td>{{this.amountOfFiles}}</td>
                     <td>
-                        <button class="button" data-bs-toggle="collapse"
-                                               data-bs-target="[data-collapse-id='{{this.id}}']">Show files</button>
+                        <button type="button" class="btn btn-primary" 
+                                data-bs-toggle="collapse" data-bs-target="[data-collapse-id='{{this.id}}']">Show files</button>
                         <ul class="collapse" data-collapse-id="{{this.id}}">
                             {{#each this.files}}
                                 <li>{{this.name}} (Time: {{this.time}} ms)</li>
